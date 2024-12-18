@@ -76,11 +76,7 @@ app.delete('/products/:id', async(req, res) => {
 // endof routes
 
 
-
-// MongoDB Database Username and Password 
-// Username - bharatjedu
-// Password - mY8s2kpbvB2uxa9v
-mongoose.connect('mongodb+srv://bharatjedu:mY8s2kpbvB2uxa9v@nodeapi.cbusw.mongodb.net/nodeAPI?retryWrites=true&w=majority&appName=NodeAPI')
+mongoose.connect(`${mongo_db_api_string_here}`)
 .then(() => {
     console.log('Connected to MongoDB');
     app.listen(3000, () => {
